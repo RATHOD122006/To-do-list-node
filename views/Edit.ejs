@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+      <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        body{
+            width: 100%;
+            height: 100vh;
+        }
+        h1{
+            text-align: center;
+            margin-top: 20px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        form{
+            width: 370px;
+            height: 350px;
+            margin: 30px auto;
+            display: flex;
+            flex-direction: column;
+             box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+             border-radius: 7px;
+            justify-content: space-around;
+            padding: 20px 10px;
+        }
+        input{
+            width: 80%;
+            margin: 0px auto;
+            border-radius: 7px;
+            height: 40px;
+            border:  0.5px solid rgb(78, 78, 78);
+            padding: 0px 10px;
+
+        }
+        form button{
+            margin: 0 auto;
+            width: 90%; 
+            height: 35px;
+            border-radius: 7px ;
+            border: 1px solid rgb(255, 255, 255);
+            outline: none;
+            background-color: blue;
+            transition: all 0.3s ease;
+            color: white;
+        }
+        form button:hover{
+            border: 1px solid blue;
+            background-color: transparent;
+            transition: all 0.3s ease;
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <h1>Node CRUD Operation</h1>
+    <form action="/updateData/<%= id%>" method="post">
+        <input type="text" name="name" placeholder="Enter Name" value="<%= singleData.name%>"><br>
+        <input type="text" name="email" placeholder="Enter Email" value="<%= singleData.email%>"><br>
+        <input type="password" name="password" placeholder="Enter Password" value="<%= singleData.password%>"><br>
+        <input type="password" name="cpassword" placeholder="Enter Conform Password" value="<%= singleData.cpassword%>"><br><br><br>
+
+        <button type="submit">submit</button>
+    </form>
+
+</body>
+</html>
